@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Glow Beauty Studio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+        </head>
+        <body>
+            <header>
+                <nav class="navbar">
+                    <a href="#" class="logo">Glow Beauty</a>
+                    <ul class="nav-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <a href="#booking" class="nav-button">Book Now</a>
+                </nav>
+            </header>
+            <main>
+                <section class="hero reveal" id="home">
+                    <div class="hero-content reveal">
+                        <p class="eyebrow">BEAUTY. CONFIDENCE. GLOW</p>
+                        <h1>Reveal the beauty<br>that is already<span> yours.</span></h1>
+                        <p class="hero-text">
+                            Premium beauty treatments designed to help you feel confident, refreshed, and beautifully yourself.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#booking" class="primary-button">Book Your Appointment</a>
+                            <a href="#services" class="secondary-button">Explore Services</a>
+                        </div>
+                    </div>
+                    <img class="hero-image reveal" src="images/pexels-taiyesalawu-36497917.jpg" alt="Woman enjoying a beauty moment at Glow Beauty Studio">
+                </section>
+                <section class="services reveal" id="services">
+                    <div class="section-heading reveal">
+                        <p class="eyebrow">WHAT WE OFFER</p>
+                        <h2>Beauty services made for you</h2>
+                        <p>From everyday beauty to special occasions we help you look and feel your best.</p>
+                    </div>
+                    <div class="service-grid">
+                        <article class="service-card reveal">
+                            <div class="service-icon">✨</div>
+                            <h3>Facial Care</h3>
+                            <p>Refresh and nourish your skin with personalized facial treatments.</p>
+                        </article>
+                        <article class="service-card reveal">
+                            <div class="service-icon">💅</div>
+                            <h3>Nail Care</h3>
+                            <p>Beautiful manicures and nail treatments designed to complete your look.</p>
+                        </article>
+                        <article class="service-card reveal">
+                            <div class="service-icon">🌟</div>
+                            <h3>Relaxation</h3>
+                            <p>Take a moment for yourself with relaxing beauty and wellness treatments.</p>
+                        </article>
+                    </div>
+                </section>
+                <section class="about reveal" id="about">
+                    <div class="about-image reveal">
+                        <div class="image-placeholder">
+                            <div class="beauty-pill">
+                                <div class="beauty-pill__icon">✦</div>
+                                <div class="beauty-pill__text">Your Beauty, Your Confidence</div>
+                            </div>
+                            <div class="beauty-orb beauty-orb--one"></div>
+                            <div class="beauty-orb beauty-orb--two"></div>
+                            <div class="beauty-spark beauty-spark--one"></div>
+                            <div class="beauty-spark beauty-spark--two"></div>
+                        </div>
+                    </div>
+                    <div class="about-content reveal">
+                        <p class="eyebrow">ABOUT GLOW BEAUTY</p>
+                        <h2>A little time for yourself can make a big difference.</h2>
+                        <p>Glow Beauty Studio was created for people who want to feel confident, cared for, and comfortable in their own skin.</p>
+                        <p>We believe beauty is not about changing who you are. It is about bringing out the confidence that is already within you.</p>
+                        <a href="#booking" class="primary-button">Book Your Visit</a>
+                    </div>
+                </section>
+                <section class="testimonials reveal">
+                    <div class="section-heading reveal">
+                        <p class="eyebrow">CLIENT LOVE</p>
+                        <h2>Loved by our clients</h2>
+                    </div>
+                    <div class="testimonial-grid">
+                        <article class="testimonial-card reveal">
+                            <p>"The service is amazing. I left feeling refreshed, confident, and beautiful."</p>
+                            <h3>_Amina</h3>
+                        </article>
+                        <article class="testimonial-card reveal">
+                            <p>"The attention to detail was incredible. I will definitely be coming back."</p>
+                            <h3>_Michelle</h3>
+                        </article>
+                        <article class="testimonial-card reveal">
+                            <p>"Such a relaxing experience. Everything felt professional from start to finish."</p>
+                            <h3>_Sarah</h3>
+                        </article>
+                    </div>
+                </section>
+                <section class="booking reveal" id="booking">
+                    <div class="booking-content reveal">
+                        <p class="eyebrow">READY TO GLOW?</p>
+                        <h2>Your next glow-up starts here.</h2>
+                        <p>Book your appointment and give yourself the care you deserve.</p>
+                        <a href="#contact" class="primary-button">Book Your Appointment</a>
+                    </div>
+                </section>
+                <section class="contact reveal" id="contact">
+                    <div class="section-heading reveal">
+                        <p class="eyebrow">GET IN TOUCH</p>
+                        <h2>We'd love to hear from you.</h2>
+                    </div>
+                    <div class="contact-info">
+                        <p data-icon="📍">Nairobi, Kenya</p>
+                        <p data-icon="☎">+254745207521</p>
+                        <p data-icon="✉">hello@glowbeauty.example</p>
+                    </div>
+                </section>
+        </main>
+        <footer>
+            <p>© 2026 Glow Beauty Studio. All rights reserved.</p>
+        </footer>
+        <script>
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+
+            revealElements.forEach((element) => {
+                const elementTop = element.getBoundingClientRect().top;
+                const revealPoint = 110;
+
+                if (elementTop < windowHeight - revealPoint) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+
+        revealOnScroll();
+        window.addEventListener('scroll', revealOnScroll);
+    </script>
+        </body>
+        </html>
